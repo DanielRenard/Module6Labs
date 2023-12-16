@@ -29,7 +29,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Greeting name='Tammy' greet={'say hi to your mother for me'}/>
+      <Greeting name='Tammy'/>
     </>
   )
 }
