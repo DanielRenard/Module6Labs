@@ -1,0 +1,8 @@
+.emojiBox {
+    border: 20px solid green;
+    border-style: groove;
+    font-size: 100px;
+    text-align: center;
+    color:blueviolet;
+    text-shadow: 2px 4px purple;
+}
