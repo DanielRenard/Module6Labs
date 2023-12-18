@@ -22,10 +22,18 @@ function CatList(){
         latinName={cat.latinName}
         image={cat.image}
         />
-    )) 
+    ))
+    
+    const handleSortByCatName = () => {
+        // console.log('handleSortByCatName')
+        let newCats = [...currentCats]
+        //sort compares a to b in arrow function
+        newCats.sort((a,b) => a.name.localeCompare(b.name))
+        setCurrentCats(newCats)
+    }
 
-    const handleSortCats = () => {
-        // console.log('handleSortCats')
+    const handleSortByLatinName = () => {
+        // console.log('handleSortByLatinName')
         let newCats = [...currentCats]
         //sort compares a to b in arrow function
         newCats.sort((a,b) => a.latinName.localeCompare(b.latinName))
@@ -50,8 +58,9 @@ function CatList(){
     return (
         <>
             <div className="sortingWrapper">
+                <button onClick={handleSortByCatName}>Sort by Name</button>
+                <button onClick={handleSortByLatinName}>Sort Latin Name</button>
                 <button onClick={handleReverseCats}>Reverse Cats</button>
-                <button onClick={handleSortCats}>Sort Cats</button>
                 <button onClick={handleSortPanthera}>Panthera Family</button>
                 <button onClick={handleRefreshList}>Refresh List</button>
             </div>
