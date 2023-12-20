@@ -12,6 +12,13 @@ function CatList(){
         { name: 'Lion', latinName: 'Panthera leo', image: '../src/images/PantheraLeo.jpg' },
         { name: 'Snow leopard', latinName: 'Panthera uncia', image: '../src/images/PantheraUncia.jpg' },
         { name: 'Tiger', latinName: 'Panthera tigris', image: '../src/images/Pantheratigris.jpg' },
+        // {name: 'Chester Cheetah', latinName: 'Chester Acinonyx jubatus', image: 'https://mma.prnewswire.com/media/930557/KFC_Cheetos_Hero_PR_Still.jpg?p=facebook'},
+        // {name: 'Serval', latinName: 'Leptailurus serval', image: 'https://i.natgeofe.com/k/8a14407c-747f-4750-a9ec-aaa81cfe88a9/serval-full-body_16x9.jpg'},
+        // {name: 'The Pink Panther', latinName: 'Ille Roseus Panthera', image: 'https://i0.wp.com/theroarbots.com/wp-content/uploads/2020/07/PinkPanther3.jpg?ssl=1'},
+        // {name: 'Bobcat', latinName: 'Lynx rufus', image: 'https://www.reconnectwithnature.org/getmedia/67fd5873-9c1b-4f73-b87c-ee0fb0482992/Bobcat-3-Predator-bobcat.jpg?width=1500&height=1000&ext=.jpg'},
+        // {name: 'Pete Puma', latinName: 'Pete puma concolor', image: 'https://dyn1.heritagestatic.com/lf?set=path%5B1%2F3%2F4%2F0%2F4%2F13404156%5D&call=url%5Bfile%3Aproduct.chain%5D'},
+        // {name: 'Felix the Cat', latinName: 'Felix Felis catus', image: 'https://imageservice.disco.peacocktv.com/uuid/1672fe2f-350f-3625-ad9c-0d89f625b1d6/LAND_16_9?language=eng&territory=US&proposition=NBCUOTT&version=c5b347b2-218b-38b5-97c8-3c63c81cb3e6'}
+        
     ];
 
     const [currentCats, setCurrentCats] = useState(cats);
@@ -50,6 +57,7 @@ function CatList(){
     }
 
     const handleAddCat = (newCat) => {
+        console.log(newCat)
         newCat.id = currentCats.length + 1; // unreliable but succinct
         //copy
         //modify
@@ -59,7 +67,7 @@ function CatList(){
     }
 
     const handleDelete = (idToDelete) => {
-        let newCats = currentCats.filter((cat, index) => index != idToDelete)
+        let newCats = currentCats.filter((index) => index != idToDelete)
         setCurrentCats(newCats)
     }
 

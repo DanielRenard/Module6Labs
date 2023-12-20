@@ -13,7 +13,7 @@ function AddCatFormUncontrolled({onAddCat}) {
     }
 
     return (
-        <div>
+        <div className="card">
             <form onSubmit={handleSubmit}>
                 <label>Cat Name:
                     <input name="name"/>

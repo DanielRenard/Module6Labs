@@ -1,5 +1,5 @@
 function Cat({catId, name, latinName, image, onDeleteEvent}){
-    const handleDelete = (e) => {
+    const handleDelete = () => {
         onDeleteEvent(catId)
     }
     return (
